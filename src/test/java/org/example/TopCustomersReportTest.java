@@ -13,7 +13,7 @@ import static junit.framework.TestCase.assertEquals;
 public class TopCustomersReportTest {
 
     @Test
-    public void generate() throws IOException {
+    public void generate() throws IOException, InterruptedException {
         Map<Customer, Double> map = new HashMap<>();
         map.put(new Customer("Alan", "alan@example.com"), 100.0);
         map.put(new Customer("Berth", "berth@example.com"), 150.0);
@@ -23,7 +23,7 @@ public class TopCustomersReportTest {
 
         TopCustomersReport.generate(map);
 
-        BufferedReader r = new BufferedReader(new FileReader("TaskTwoReport.csv"));
+        BufferedReader r = new BufferedReader(new FileReader("TaskTwoThread.csv"));
         assertEquals("Customer, Money Spent ", r.readLine());
         assertEquals("Customer{John john@example.com}, 500.0", r.readLine());
         assertEquals("Customer{Dave dave@example.com}, 300.0", r.readLine());

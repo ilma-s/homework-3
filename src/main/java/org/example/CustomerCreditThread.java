@@ -15,6 +15,7 @@ public class CustomerCreditThread implements Runnable{
 
     @Override
     public void run() {
-        this.sortedMap = MapUtil.getFirstN(map, 10);
+        int n = map.size();
+        this.sortedMap = MapUtil.getFirstN(map, n);
     }
 }

@@ -15,11 +15,11 @@ public class RecommendedItemsReportTest {
     @Test
     public void generate() throws IOException {
         Map<String, Integer> customerByCredit = new HashMap<>();
-        customerByCredit.put("Bob", 150); //
-        customerByCredit.put("Alice", 140);//
+        customerByCredit.put("Bob", 150);
+        customerByCredit.put("Alice", 140);
         customerByCredit.put("Jane", 15);
         customerByCredit.put("John", 50);
-        customerByCredit.put("Jack", 8); //
+        customerByCredit.put("Jack", 8);
 
         ArrayList<Item> allItems = new ArrayList<>();
         allItems.add(new Item("Ball", 150.0, 15, "sports equipment"));
